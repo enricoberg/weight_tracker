@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="neon-title">Weight Tracker</h1>
+        
+        <div class="input-section">
+            <input type="text" id="weightInput" placeholder="Inserisci peso (xx,y)" maxlength="4">
+            <button id="submitBtn"><i class="fas fa-check"></i></button>
+        </div>
+        
+        <div class="indicators">
+            <div class="indicator">
+                <span class="indicator-label">Mese corrente</span>
+                <span id="monthlyChange" class="indicator-value">0,0 kg</span>
+            </div>
+            <div class="indicator">
+                <span class="indicator-label">Media globale</span>
+                <span id="rateChange" class="indicator-value">0,0 kg/mese</span>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <canvas id="weightChart"></canvas>
+        </div>
+        
+        <div class="actions">
+            <button id="copyBtn" class="action-btn">
+                <i class="fas fa-copy"></i> COPIA
+            </button>
+            <button id="chartBtn" class="action-btn">
+                <i class="fas fa-chart-line"></i> CHART
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
